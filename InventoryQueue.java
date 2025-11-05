@@ -1,6 +1,9 @@
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
+/**
+ * Represents a single change in local inventory that needs to be communicated to central.
+ */
 class InventoryEvent {
     private final String inventoryId;
     private final int quantityChange;
@@ -24,6 +27,10 @@ class InventoryEvent {
     }
 }
 
+/**
+ * The buffer component (Event Queue) that decouples the local store service from the central corporate service.
+ * This is crucial for availability: if the central network is down, the local service can still enqueue events and continue operating.
+ */
 public class InventoryQueue {
     private final Queue<InventoryEvent> queue = new ConcurrentLinkedQueue<>();
 
