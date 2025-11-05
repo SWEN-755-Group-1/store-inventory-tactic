@@ -9,6 +9,11 @@ The system prioritizes local availability through the following mechanism:
 2. **Asynchronous Synchronization**: The Sync Agent constantly and asynchronously processes events from the queue, applying them to the Central Inventory Service.
 3. **Consistency & Conflict Resolution**: This pattern results in consistency between the local and central inventories. The Sync Agent also includes logic to detect conflicting events (like unusually large quantity changes) and triggers a conflict resolution mechanism to prevent data corruption.
 
+### Class Diagram
+![Tactic Class Diagram](/tactic-class-diagram.png)
+
+### Sequence Diagram
+
 ## Running the Application
 
 To run the application, open a terminal in the project directory and run the following commands:
