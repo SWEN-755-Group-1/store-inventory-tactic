@@ -13,6 +13,7 @@ The system prioritizes local availability through the following mechanism:
 ![Tactic Class Diagram](/tactic-class-diagram.png)
 
 ### Sequence Diagram
+![Tactic Sequence Diagram](/tactic-sequence-diagram.png)
 
 ## Running the Application
 
